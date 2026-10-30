@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-slate-200; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-mist text-ink antialiased; }
+  ::selection { @apply bg-sea text-ink; }
+}
+@layer components {
+  .shell { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12; }
+  .eyebrow { @apply text-[10px] font-bold uppercase tracking-[.2em] text-tide; }
+  .display { @apply font-serif text-5xl leading-[.94] tracking-[-.045em] text-ink sm:text-6xl lg:text-7xl; }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-tide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tide focus-visible:ring-offset-2; }
+  .btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 bg-white px-5 py-3.5 text-sm font-bold transition hover:-translate-y-0.5 hover:border-tide hover:text-tide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tide; }
+}
